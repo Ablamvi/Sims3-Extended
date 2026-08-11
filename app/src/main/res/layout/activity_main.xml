@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A2E">
+
+    <!-- Surface de rendu 3D / jeu -->
+    <com.sims3.extended.render.GameView
+        android:id="@+id/gameView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Panel des besoins (overlay) -->
+    <LinearLayout
+        android:id="@+id/needsPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_margin="12dp"
+        android:background="#CC000000"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="=== BESOINS ==="
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtNeeds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Chargement..."
+            android:textColor="#EEEEEE"
+            android:textSize="12sp"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="08:00 - Jour 1"
+            android:textColor="#88CCFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humeur : Neutre"
+            android:textColor="#FFDD88"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Aide -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="12dp"
+        android:background="#99000000"
+        android:padding="8dp"
+        android:text="Touche un objet pour interagir • Les besoins baissent avec le temps"
+        android:textColor="#CCCCCC"
+        android:textSize="11sp" />
+</FrameLayout>
